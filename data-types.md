@@ -1,5 +1,3 @@
-![Trinta Dias De JavaScript](../images/banners/day_1_2.png)
-
 - [📔 Dia 2](#-dia-2)
 	- [Tipos de Dados](#tipos-de-dados)
 		- [Tipos de Dados Primitivos](#tipos-de-dados-primitivos)
