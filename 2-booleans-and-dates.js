@@ -249,22 +249,20 @@ console.log(Boolean (nada));
 		let nome1 = prompt("Digite seu nome");
 		nome1 = String(nome1);
 
-			if (nome1.length > 7){ 
-				console.log("Seu nome é longo");
-			} else{
-				console.log("Seu nome é curto");
-			};
+			nome1.length > 7
+				? console.log("Seu nome é longo")
+				: console.log("Seu nome é curto");
+			
 
 		// Compare o comprimento do seu primeiro nome com o do seu sobrenome e você deve obter esta saída.
 
 		let firstName1 = prompt("Digite seu primeiro nome");
 		let lastName1 = prompt("Digite seu sobrenome");
 
-			if (firstName1.length > lastName1.length){
-				console.log('Seu primeiro nome, ' + firstName1 , 'é mais longo que seu sobrenome, ' + lastName1);
-			} else{
-				console.log('Seu primeiro nome, ' + firstName1 , 'é mais curto que seu sobrenome, ' + lastName1);
-			};
+			firstName1.length > lastName1.length
+				? console.log('Seu primeiro nome, ' + firstName1 , 'é mais longo que seu sobrenome, ' + lastName1)
+				: console.log('Seu primeiro nome, ' + firstName1 , 'é mais curto que seu sobrenome, ' + lastName1);
+			
 
 		// Declare duas variáveis, myAge e yourAge, e atribua valores iniciais a elas. 
 
@@ -274,11 +272,14 @@ console.log(Boolean (nada));
 
 		let comparar = Math.abs(myAge - yourAge);
 
-			if(myAge > yourAge){
-				console.log('Eu sou ' + comparar , 'anos mais velho que você.');
-			} else {
-				console.log('Eu sou ' + comparar , 'anos mais novo que você.');
-			}
+		if(myAge === yourAge){
+			console.log('Temos a mesma idade')
+		} else{
+			myAge > yourAge
+				? console.log('Eu sou ' + comparar , 'anos mais velho que você.')
+				: console.log('Eu sou ' + comparar , 'anos mais novo que você.');
+		}
+			
 
 		// Usando prompt, obtenha o ano em que o usuário nasceu e, se o usuário tiver 18 anos ou mais, permita que ele dirija; caso contrário, diga ao usuário para esperar uma certa quantidade de anos.
 
@@ -288,17 +289,21 @@ console.log(Boolean (nada));
 		let anoAtual = new Date().getFullYear(); 
 		let idade = anoAtual - anoNascimento;
 
-		if (idade >= 18) {
-		console.log("Você tem " + idade + " anos. Você tem idade suficiente para dirigir.");
-		} else {
-		let anosFaltando = 18 - idade;
-		console.log("Você tem " + idade + " anos. Você ainda não pode dirigir. Espere mais " + anosFaltando + " anos.");
-		}
-
+		idade >= 18 
+		? console.log("Você tem " + idade + " anos. Você tem idade suficiente para dirigir.")
+		: console.log("Você tem " + idade + " anos. Você ainda não pode dirigir. Espere mais " + (18 - idade) + " anos.");
+		
 		// Escreva um script que solicite ao usuário para inserir o número de anos. Calcule o número de segundos que uma pessoa pode viver. Suponha que alguém viva exatamente cem anos.
 
 		let anos = prompt("Digite o número de anos que você viveu:");
-		
+		anos = Number(anos);
+
+		let segundosPorAno = 365 * 24 * 60 * 60;
+
+		let totalSegundos = anos * segundosPorAno;
+  
+		console.log('Você viveu ' + totalSegundos , 'segundos');
+
 
 		// Exercícios: Nível 3
 
