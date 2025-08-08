@@ -124,20 +124,61 @@ switch (dia){
 		console.log(dia + ' é um final de semana');
 		break;
 	default:
-	console.log("Dia inválido");		
+	console.log('Dia inválido');		
 }
 
 // Exercícios: Nível 3
 
 // Escreva um programa que informe o número de dias em um mês.
 
-let dias = prompt("Digte um mês").toLowerCase();
+let mes1 = prompt("Digte um mês").toLowerCase();
 
-switch (dias){
+switch (mes1){
 	case 'janeiro':
-	case 'marco':
+	case 'março':
 	case 'maio':	
+	case 'julho':
+	case 'agosto':
+	case 'outubro':
+	case 'dezembro':
+		console.log(mes1 + ' tem 31 dias.');
+		break;
+	case 'abril':	
+	case 'junho':
+	case 'setembro':
+	case 'novembro':
+		console.log(mes1 + ' tem 30 dias.');
+		break;	
+	case 'fevereiro':
+		console.log(mes1 + ' tem 28 dias.');		
+		break;
+	default:
+	console.log('Mês inválido');
 }
 
-
 // Escreva um programa que informe o número de dias em um mês, agora considerando o ano bissexto.
+
+let mes2 = prompt("Digte um mês").toLowerCase();
+
+switch (mes2){
+	case 'janeiro':
+	case 'março':
+	case 'maio':	
+	case 'julho':
+	case 'agosto':
+	case 'outubro':
+	case 'dezembro':
+		console.log(mes2 + ' tem 31 dias.');
+		break;
+	case 'abril':	
+	case 'junho':
+	case 'setembro':
+	case 'novembro':
+		console.log(mes2 + ' tem 30 dias.');
+		break;	
+	case 'fevereiro':
+		console.log(mes2 + ' tem 29 dias.');		
+		break;
+	default:
+	console.log('Mês inválido');
+}
